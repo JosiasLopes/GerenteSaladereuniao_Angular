@@ -1,0 +1,46 @@
+<div class=" panel panel-primary">
+  <div class="panel-heading">
+    <h2>Room-list</h2>
+  </div>
+  <div class="panel-body">
+      <table class="table tale-striped">
+        <thead>     <!--cabeçalho da tabela-->
+          <tr>
+            <th>name</th>
+            <th>date</th>
+            <th>startHour</th>
+            <th>endHour</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>     <!--corpo da tabela-->
+          <tr *ngFor="let room of rooms | async"> <!--Faz a iteração atraves de um laço for onde room é item atual-->
+            <td>{{room.name}}</td>
+            <td>{{room.data}}</td>
+            <td>{{room.startHour}}</td>
+            <td>{{room.endHour}}</td>
+            <td><button (click)="deleteRoom(room.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateRoom(room.id)" class="btn btn-info" style="margin-left: 10px;">Update</button>
+              <button (click)="detailsRoom(room.id)" class="btn btn-info" style="margin-left: 10px;">Details</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

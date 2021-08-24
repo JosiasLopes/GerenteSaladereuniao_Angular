@@ -1,0 +1,31 @@
+<h2>Create-Room</h2>
+<div [hidden]="submitted" style="width: 480px;">
+  <form (ngSubmit)="onSubmit()">    <!--ao pressionar o botao submit o metod onSubmit é executado na acao-->
+    <div class="form-group">
+      <label for="name">name</label>
+      <!--gera um input type onde o valor não pode ser nulo, e é passado pelo room.name atraves de two Way databind-->
+      <input type="text" class="form-control" id="name" required [(ngModel)]="room.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">data</label>
+
+      <input type="text" class="form-control" id="data" required [(ngModel)]="room.data" name="data">
+    </div>
+
+    <div class="form-group">
+      <label for="name">startHour</label>
+
+      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
+    </div>
+
+    <div class="form-group">
+      <label for="name">endHour</label>
+
+      <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
+    </div>
+
+    <button type="submit" class="btn btn-info">Submit</button>
+
+  </form>
+</div>
